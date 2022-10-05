@@ -43,7 +43,7 @@ public class VentanaPrincipal extends JFrame
         
         //Caracteristicas de la ventana
         setTitle("Empresa");
-        setSize(800,1200);
+        setSize(500,700);
         //setLocation(10,10);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

@@ -10,6 +10,7 @@ public class empresa
     private int horasMensuales;
     private int EdadEmpleado;
     private int DialogoHorasSalario;
+    public int salario;
 
     //------------------------------
     //---------METODOS--------------
@@ -17,7 +18,7 @@ public class empresa
 
     //Constructor
 
-    public empresa(int pAUX_TRANSPORTE, int phorasMensuales, int pfechaIngreso, int EdadEmpleado)
+    public empresa(int pAUX_TRANSPORTE, int phorasMensuales, int pfechaIngreso, int EdadEmpleado, int salario)
     {
         this.fechaIngreso = pfechaIngreso;
         this. horasMensuales = phorasMensuales;
@@ -48,6 +49,11 @@ public class empresa
         return this.EdadEmpleado;
     }
 
+    public int getSalario()
+    {
+        return this.salario;
+    }
+
     public void setfechaIngreso(int pfechaIngreso)
     {
         this.fechaIngreso = pfechaIngreso;
@@ -68,10 +74,16 @@ public class empresa
 
     public void EdadEmpleado(int pfechaIngreso)
     {
-        if(pfechaIngreso < 2022)
+        if(pfechaIngreso != 2022)
         {
             setfechaIngreso(2022-getfechaIngreso());
         }
+
+        if(EdadEmpleado == 0)
+        {
+            setfechaIngreso(2022 - getfechaIngreso() + 18);
+        }
+        this.EdadEmpleado = pfechaIngreso;
     }
 
     public void AUX_TRANSPORTE() {

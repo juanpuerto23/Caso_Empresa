@@ -37,17 +37,19 @@ public class Controlador implements ActionListener
             try
             {
                 int horasMensuales = Integer.parseInt(venPrin.miPanelEntradaDatos.getHorasMensuales());
+                int salario = Integer.parseInt(venPrin.miPanelEntradaDatos.getSalario());
                 int EdadEmpleado = Integer.parseInt(venPrin.miPanelEntradaDatos.getEdadEmpleado());
                 int AUX_TRANSPORTE = Integer.parseInt(venPrin.miPanelEntradaDatos.getAUX_TRANSPORTE());
                 int fechaIngreso = Integer.parseInt(venPrin.miPanelEntradaDatos.getfechaIngreso());
                 //Creación del objeto tipo Carro
-                model = new empresa(AUX_TRANSPORTE, fechaIngreso, horasMensuales, EdadEmpleado);
-                
-                venPrin.miPanelResultado.mostrarResultado("Este es su salario");
-                venPrin.miPanelResultado.mostrarResultado("Sus horas trabajadas son " + model.gethorasMensuales());
-                venPrin.miPanelResultado.mostrarResultado("Su valoracion es de " + model.gethorasMensuales());
-                venPrin.miPanelResultado.mostrarResultado("Su edad (" + model.getEdadEmpleado());
-                venPrin.miPanelResultado.mostrarResultado("Su auxilio de transporte es " + model.getAUX_TRANSPORTE());
+                model = new empresa(AUX_TRANSPORTE, fechaIngreso, horasMensuales, EdadEmpleado, salario);
+
+                venPrin.miPanelResultado.mostrarResultado("Usted gana " + salario + " salarios minimos");
+                venPrin.miPanelResultado.mostrarResultado("Sus horas trabajadas son " + horasMensuales);
+                venPrin.miPanelResultado.mostrarResultado("Su valoracion es de " + horasMensuales);
+                venPrin.miPanelResultado.mostrarResultado("Su edad es de " + EdadEmpleado);
+                venPrin.miPanelResultado.mostrarResultado("Su auxilio de transporte es " + AUX_TRANSPORTE);
+                venPrin.miPanelResultado.mostrarResultado("Su antiguedad es de " + (2022 - fechaIngreso) + " años");
 
                 //Desactivar boton crear
                 venPrin.miPanelOperaciones.desactivarBotonCrear();
