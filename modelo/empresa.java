@@ -8,7 +8,6 @@ public class empresa
     private int AUX_TRANSPORTE;
     private int fechaIngreso;
     private int horasMensuales;
-    private int EdadEmpleado;
     private int DialogoHorasSalario;
     public int salario;
 
@@ -44,11 +43,6 @@ public class empresa
         return this.horasMensuales;
     }
 
-    public int getEdadEmpleado()
-    {
-        return this.EdadEmpleado;
-    }
-
     public int getSalario()
     {
         return this.salario;
@@ -79,11 +73,6 @@ public class empresa
             setfechaIngreso(2022-getfechaIngreso());
         }
 
-        if(EdadEmpleado == 0)
-        {
-            setfechaIngreso(2022 - getfechaIngreso() + 18);
-        }
-        this.EdadEmpleado = pfechaIngreso;
     }
 
     public void AUX_TRANSPORTE() {

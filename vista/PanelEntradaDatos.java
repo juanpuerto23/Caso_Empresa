@@ -16,12 +16,10 @@ public class PanelEntradaDatos extends JPanel
     private JLabel lbImagen;
     private ImageIcon iImagen;
     private JLabel lbSumTotal;
-    private JLabel lbEdad;
     private JLabel lbAuTrans;
     private JLabel lbHorasExtra;
     private JLabel lbfechaIngreso;
     private JTextField tfSumTotal;
-    private JTextField tfEdad;
     private JTextField tfAuTrans;
     private JTextField tfHorasExtra;
     private JTextField tffechaIngreso;
@@ -44,12 +42,8 @@ public class PanelEntradaDatos extends JPanel
         
         //Creación y adición de etiquetas Color, PosX y PosY
         lbSumTotal = new JLabel("Salario = ");
-        lbSumTotal.setBounds(240,10,130,20);
+        lbSumTotal.setBounds(240,40,130,20);
         add(lbSumTotal);
-        
-        lbEdad = new JLabel("Edad = ");
-        lbEdad.setBounds(240,40,130,20);
-        add(lbEdad);
         
         lbAuTrans = new JLabel("Auxilio = ");
         lbAuTrans.setBounds(240,70,130,20);
@@ -66,12 +60,8 @@ public class PanelEntradaDatos extends JPanel
         
         //Creación y adición de campos de texto
         tfSumTotal= new JTextField("0");
-        tfSumTotal.setBounds(350, 10, 60, 20);
+        tfSumTotal.setBounds(350, 40, 60, 20);
         add(tfSumTotal);
-        
-        tfEdad = new JTextField("0");
-        tfEdad.setBounds(350, 40, 60, 20);
-        add(tfEdad);
         
         tfAuTrans = new JTextField("0");
         tfAuTrans.setBounds(350, 70, 60, 20);
@@ -101,11 +91,6 @@ public class PanelEntradaDatos extends JPanel
         return tfSumTotal.getText();
     }
     
-    public String getEdadEmpleado()
-    {
-        return tfEdad.getText();
-    }
-    
     public String getAUX_TRANSPORTE()
     {
         return tfAuTrans.getText();
@@ -119,7 +104,6 @@ public class PanelEntradaDatos extends JPanel
     public void borrar()
     {
         tfSumTotal.setText("");
-        tfEdad.setText("");
         tfAuTrans.setText("");
         tfHorasExtra.setText("");
     }

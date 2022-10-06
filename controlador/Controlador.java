@@ -38,16 +38,15 @@ public class Controlador implements ActionListener
             {
                 int horasMensuales = Integer.parseInt(venPrin.miPanelEntradaDatos.getHorasMensuales());
                 int salario = Integer.parseInt(venPrin.miPanelEntradaDatos.getSalario());
-                int EdadEmpleado = Integer.parseInt(venPrin.miPanelEntradaDatos.getEdadEmpleado());
                 int AUX_TRANSPORTE = Integer.parseInt(venPrin.miPanelEntradaDatos.getAUX_TRANSPORTE());
                 int fechaIngreso = Integer.parseInt(venPrin.miPanelEntradaDatos.getfechaIngreso());
                 //Creación del objeto tipo Carro
-                model = new empresa(AUX_TRANSPORTE, fechaIngreso, horasMensuales, EdadEmpleado, salario);
+                model = new empresa(AUX_TRANSPORTE, fechaIngreso, horasMensuales, salario, fechaIngreso);
 
                 venPrin.miPanelResultado.mostrarResultado("Usted gana " + salario + " salarios minimos");
                 venPrin.miPanelResultado.mostrarResultado("Sus horas trabajadas son " + horasMensuales);
                 venPrin.miPanelResultado.mostrarResultado("Su valoracion es de " + horasMensuales);
-                venPrin.miPanelResultado.mostrarResultado("Su edad es de " + EdadEmpleado);
+                venPrin.miPanelResultado.mostrarResultado("Su edad es de " + ((2022 - fechaIngreso) + 18));
                 venPrin.miPanelResultado.mostrarResultado("Su auxilio de transporte es " + AUX_TRANSPORTE);
                 venPrin.miPanelResultado.mostrarResultado("Su antiguedad es de " + (2022 - fechaIngreso) + " años");
 
@@ -82,7 +81,7 @@ public class Controlador implements ActionListener
         if(comando.equals("Edad"))
         {
             model.EdadEmpleado(0);
-            venPrin.miPanelResultado.mostrarResultado("\n su edad actual es" + model.getEdadEmpleado());
+            venPrin.miPanelResultado.mostrarResultado("\n su edad actual es de " + ((2040 - model.getfechaIngreso()) + " años."));
         }
         
         if(comando.equals("Auxilio de transporte"))
