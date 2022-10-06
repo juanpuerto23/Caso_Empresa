@@ -5,3 +5,7 @@ Una empresa desea conocer el total a pagar por conceptos de salarios a sus emple
 ## Diagrama
 
 ![Diagrama](EmpresaDiagrama.png)
+
+## Captura
+
+![Captura](Captura.png)
